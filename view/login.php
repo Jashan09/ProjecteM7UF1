@@ -38,6 +38,8 @@ include_once "template/nav.php";
         echo $_SESSION["ERRORS"];
         unset($_SESSION["ERRORS"]);
     }
+
+    echo $_SESSION["boolProva"];
     ?>
 
 </div>

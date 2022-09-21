@@ -11,7 +11,6 @@ function checkCred($username,$pass){
         if($usuari->getUser()===$username){
             $_SESSION["boolProva"] = 2;
             if($usuari->getContrasenya()===$pass){
-                $_SESSION["boolProva"] = 0;
                 return $usuari;
             }
         }
