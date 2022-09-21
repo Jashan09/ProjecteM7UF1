@@ -1,6 +1,7 @@
 <?php
 include_once "../model/Persona.php";
 if(session_status() === PHP_SESSION_NONE) session_start();
+
 ?>
 
 <!doctype html>
@@ -30,6 +31,15 @@ include_once "template/nav.php";
     <input type="submit" name="intentDeLogin" value="Loggejar-te">
 </form>
 
+    <br>
+
+    <?php
+    if($_SESSION["ERRORS"]){
+        echo $_SESSION["ERRORS"];
+        unset($_SESSION["ERRORS"]);
+    }
+    ?>
+
 </div>
 
 <?php
@@ -38,3 +48,4 @@ include_once "template/footer.php";
 
 </body>
 </html>
+
