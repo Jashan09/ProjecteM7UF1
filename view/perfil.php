@@ -26,13 +26,13 @@ if(session_status() === PHP_SESSION_NONE) session_start();
         <h2>Perfil del usuari: <?php echo  $_SESSION["objUser"]->getUser()?> </h2>
         <br>
 
-    <form action="../controller/perfilController.php">
+    <form action="../controller/perfilController.php" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" value="<?php echo $_SESSION["objUser"]->getUser();?>"><br><br>
         <label for="email">Email:</label>
         <input type="text" id="email" name="email" value="<?php echo $_SESSION["objUser"]->getEmail();?>"><br><br>
         <label for="email">Contrasenya:</label>
-        <input type="password" id="email" name="email" value="<?php echo $_SESSION["objUser"]->getContrasenya();?>"><br><br>
+        <input type="password" id="contrasenya" name="contrasenya" value="<?php echo $_SESSION["objUser"]->getContrasenya();?>"><br><br>
         <!-- falta fer un foreach dels bitllets que conté el usuari -->
         <input type="submit" value="Canviar dades">
     </form>
