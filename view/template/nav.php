@@ -1,3 +1,8 @@
+<?php
+require_once "../model/Persona.php";
+if(session_status() === PHP_SESSION_NONE) session_start();
+?>
+
 
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
@@ -9,6 +14,19 @@
     </div>
 
     <div class="rightNav" style="display: inline-block; position: absolute; right: 5px;">
+
+
+        <?php
+
+        if(isset($_SESSION["objUser"])){
+            ?>
+            <a href="perfil.php"> <?php echo $_SESSION["objUser"]->getUser(); ?>    </a>
+            <?php
+        }
+
+
+        ?>
+
 
         <a href="login.php" style="text-decoration: none; color:white; border-style: solid; font-family: Arial; color: black; border-color: darkgreen"> Loggejar-se </a>
 
