@@ -15,6 +15,12 @@ if(session_status() === PHP_SESSION_NONE) session_start();
     </head>
     <body>
 
+
+
+    <?php
+    if($_SESSION["objUser"]->getUser() != "admin"){
+        ?>
+
     <div class="divConfirmaBitllets">
 
         <h2>Perfil del usuari: <?php echo  $_SESSION["objUser"]->getUser()?> </h2>
@@ -32,6 +38,36 @@ if(session_status() === PHP_SESSION_NONE) session_start();
     </form>
 
     </div>
+
+        <?php
+    }
+    ?>
+
+
+
+    <div class="divConfirmaBitllets">
+
+        <h2>Panel d'admin</h2>
+        <br>
+
+        <a href="" style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; font-size:25px">Gestionar usuaris</a>
+        <br>
+        <br>
+        <a href="" style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; font-size:25px">Gestionar bitllets</a>
+        <br>
+        <br>
+        <a href="" style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; font-size:25px">Gestionar trajectes</a>
+
+
+
+
+
+
+    </div>
+
+
+
+
 
     </body>
     </html>
