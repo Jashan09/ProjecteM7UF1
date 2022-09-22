@@ -27,8 +27,8 @@ if(session_status() === PHP_SESSION_NONE) session_start();
         <br>
 
     <form action="../controller/perfilController.php">
-        <label for="Username">Username:</label>
-        <input type="text" id="Username" name="Username" value="<?php echo $_SESSION["objUser"]->getUser();?>"><br><br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="<?php echo $_SESSION["objUser"]->getUser();?>"><br><br>
         <label for="email">Email:</label>
         <input type="text" id="email" name="email" value="<?php echo $_SESSION["objUser"]->getEmail();?>"><br><br>
         <label for="email">Contrasenya:</label>
