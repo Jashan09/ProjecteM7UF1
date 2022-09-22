@@ -35,11 +35,9 @@ include_once "template/nav.php";
 
     <?php
     if($_SESSION["ERRORS"]){
-        echo $_SESSION["ERRORS"];
+        echo "<h4>" . $_SESSION["ERRORS"] . "</h4>";
         unset($_SESSION["ERRORS"]);
     }
-
-    echo $_SESSION["boolProva"];
     ?>
 
 </div>

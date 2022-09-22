@@ -1,4 +1,5 @@
 <?php
+include_once "../model/Persona.php";
 if(session_status() === PHP_SESSION_NONE) session_start();
 ?>
 
@@ -24,7 +25,7 @@ include_once "template/nav.php";
 
     <br>
 
-<form action="../controller/registreController.php" method="post">
+<form action="../controller/registerController.php" method="post">
     <label for="user">Nom d'usuari:</label><br>
     <input type="text" id="user" name="user"
         <?php if(isset($_SESSION["user"])){
@@ -50,6 +51,17 @@ include_once "template/nav.php";
     <input type="password" id="pass2" name="pass2"><br><br>
     <input type="submit" value="Registrar-te">
 </form>
+
+    <br>
+
+    <?php
+    if($_SESSION["ERRORS"]){
+        echo "<h4>" . $_SESSION["ERRORS"] . "</h4>";
+        unset($_SESSION["ERRORS"]);
+    }
+    unset($_SESSION["user"]);
+    unset($_SESSION["email"]);
+    ?>
 
 </div>
 

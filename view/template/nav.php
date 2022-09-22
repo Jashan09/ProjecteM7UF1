@@ -10,7 +10,7 @@
 
     <div class="rightNav" style="display: inline-block; position: absolute; right: 5px;">
 
-        <a href="vistaLogin.php" style="text-decoration: none; color:white; border-style: solid; font-family: Arial; color: black; border-color: darkgreen"> Loggejar-se </a>
+        <a href="login.php" style="text-decoration: none; color:white; border-style: solid; font-family: Arial; color: black; border-color: darkgreen"> Loggejar-se </a>
 
 
         <a href="register.php" style="text-decoration: none; color:white; border-style: solid; font-family: Arial; color: black; border-color: darkgreen">Registar-se</a>
