@@ -20,7 +20,17 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
         if(isset($_SESSION["objUser"])){
             ?>
-            <a href="perfil.php" style="text-decoration: none; " > <?php  echo $_SESSION["objUser"]->getUser(); ?>    </a>
+            <a href="perfil.php" style="text-decoration: none; border-style: solid; margin-right: 10px; padding-left: 5px"> <?php  echo $_SESSION["objUser"]->getUser(); ?>    </a>
+
+            <?php
+
+            if($_SESSION["objUser"]->getUser() == "admin" ){
+                ?>
+                <a href="login.php" style="text-decoration: none; color:white; border-style: solid; color: black; padding: 0px 0px 0px 5px; background-color: darkseagreen"">Manage users </a>
+                    <?php
+            }
+            ?>
+
 
             <a href="login.php" style="text-decoration: none; color:white; border-style: solid; color: black; margin: 0px 10px 0px 10px; padding: 0px 10px 0px 10px; background-color: indianred; ">Log off</a>
 

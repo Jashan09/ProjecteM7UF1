@@ -26,6 +26,8 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
     <?php
 
+    //$_SESSION["anadaTornadaBool"];
+
     if($_SESSION["trajecte"]=="12"){
         $origen = "Barcelona";
         $destinacio = "Badalona";
