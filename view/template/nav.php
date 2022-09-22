@@ -20,7 +20,7 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
         if(isset($_SESSION["objUser"])){
             ?>
-            <a href="perfil.php"> <?php echo $_SESSION["objUser"]->getUser(); ?>    </a>
+            <a href="perfil.php"> <?php  echo $_SESSION["objUser"]->getUser(); ?>    </a>
             <?php
         }
 
