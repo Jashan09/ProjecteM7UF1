@@ -20,18 +20,30 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
         if(isset($_SESSION["objUser"])){
             ?>
-            <a href="perfil.php"> <?php  echo $_SESSION["objUser"]->getUser(); ?>    </a>
+            <a href="perfil.php" style="text-decoration: none; " > <?php  echo $_SESSION["objUser"]->getUser(); ?>    </a>
+
+            <a href="login.php" style="text-decoration: none; color:white; border-style: solid; color: black; margin: 0px 10px 0px 10px; padding: 0px 10px 0px 10px; background-color: indianred; ">Log off</a>
+
             <?php
         }
-
-
         ?>
 
 
-        <a href="login.php" style="text-decoration: none; color:white; border-style: solid; font-family: Arial; color: black; border-color: darkgreen"> Loggejar-se </a>
+        <?php
+
+        if(!isset($_SESSION["objUser"])){
+            ?>
+            <a href="login.php" style="text-decoration: none; color:white; border-style: solid; color: black; margin-left: 10px; background-color: darkseagreen""> Loggejar-se </a>
+
+            <a href="register.php" style="text-decoration: none; color:white; border-style: solid; color: black; margin-left: 10px; background-color: darkseagreen">Registrar-se</a>
+
+            <?php
+        }
+        ?>
 
 
-        <a href="register.php" style="text-decoration: none; color:white; border-style: solid; font-family: Arial; color: black; border-color: darkgreen">Registar-se</a>
+
+
 
 
 
