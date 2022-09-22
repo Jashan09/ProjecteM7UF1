@@ -93,3 +93,18 @@ small{
 h4{
     color: indianred;
 }
+
+
+.divConfirmaBitllets{
+    padding-top: 25px;
+    margin-top: 200px;
+    padding-left: 50px;
+    padding-bottom: 25px;
+    text-align: center;
+
+    background-color: darkseagreen;
+    border-style: solid;
+
+
+
+}

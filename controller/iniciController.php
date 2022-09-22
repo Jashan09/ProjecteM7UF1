@@ -8,7 +8,7 @@ $destinacio = $_POST["destinacio"];
 $_SESSION["trajecte"] = checkTrajecte($origen, $destinacio);
 
 if($_SESSION["trajecte"] != null){
-    header("Location: ../view/ventaBitllets.php");
+    header("Location: ../view/confirmaBitllets.php");
     exit();
 }
 
