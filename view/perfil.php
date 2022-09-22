@@ -34,8 +34,18 @@ if(session_status() === PHP_SESSION_NONE) session_start();
         <label for="email">Contrasenya:</label>
         <input type="password" id="contrasenya" name="contrasenya" value="<?php echo $_SESSION["objUser"]->getContrasenya();?>"><br><br>
         <!-- falta fer un foreach dels bitllets que conté el usuari -->
-        <input type="submit" value="Canviar dades">
+        <input type="submit" name="canviarDadesUsuariNormal" value="Canviar dades">
     </form>
+
+
+        <?php
+
+        if(isset($_SESSION["missatgeDeConfirmacio"])){
+            echo $_SESSION["missatgeConfirmacio"];
+            unset($_SESSION["missatgeConfirmacio"]);
+        }
+
+        ?>
 
     </div>
 
@@ -50,7 +60,7 @@ if(session_status() === PHP_SESSION_NONE) session_start();
         <h2>Panel d'admin</h2>
         <br>
 
-        <a href="" style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; font-size:25px">Gestionar usuaris</a>
+        <a href="../controller/perfilController.php" style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; font-size:25px" id="something" for="something" value="something" name="something" >Gestionar usuaris</a>
         <br>
         <br>
         <a href="" style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; font-size:25px">Gestionar bitllets</a>
