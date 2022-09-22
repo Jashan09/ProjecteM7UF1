@@ -8,14 +8,8 @@ if(session_start() === PHP_SESSION_NONE) session_start();
     $resultat = checkCred($_SESSION["user"], $_SESSION["pass"]);
 
     if($resultat==null){ //usuari no loggejat
-        if($_SESSION["boolProva"]==1) {
-            $_SESSION["ERRORS"] .= "Error. Usuari no existent en la BBDD..." . "<br>";
-            $_SESSION["ERRORS"] .= "Error. Contrasenya incorrecta..." . "<br>";
-        }
-        if($_SESSION["boolProva"]==2) {
-            $_SESSION["ERRORS"] .= "Error. Contrasenya incorrecta..." . "<br>";
-        }
 
+        $_SESSION["ERRORS"] .= "Error. Contrasenya o username incorrecte..." . "<br>";
         header("Location: ../view/login.php");
         exit();
     }else{//usuari loggejat
