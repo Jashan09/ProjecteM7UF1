@@ -28,16 +28,16 @@ include_once "template/nav.php";
 <form action="../controller/registerController.php" method="post">
     <label for="user">Nom d'usuari:</label><br>
     <input type="text" id="user" name="user"
-        <?php if(isset($_SESSION["user"])){
-            echo "value=" . $_SESSION["user"];
+        <?php if(isset($_SESSION["user2"])){
+            echo "value=" . $_SESSION["user2"];
         }
         ?>
     ><br>
 
     <label for="email">E-mail:</label><br>
     <input type="text" id="email" name="email"
-        <?php if(isset($_SESSION["email"])){
-            echo "value=" . $_SESSION["email"];
+        <?php if(isset($_SESSION["email2"])){
+            echo "value=" . $_SESSION["email2"];
         }
         ?>
 
@@ -59,8 +59,8 @@ include_once "template/nav.php";
         echo "<h4>" . $_SESSION["ERRORS"] . "</h4>";
         unset($_SESSION["ERRORS"]);
     }
-    unset($_SESSION["user"]);
-    unset($_SESSION["email"]);
+    unset($_SESSION["user2"]);
+    unset($_SESSION["email2"]);
     ?>
 
 </div>
