@@ -28,7 +28,8 @@ if($_SESSION["pass1"] === $_SESSION["pass2"]){
     }
 
     if($booleanProva == 0){
-        $_SESSION["usuaris"][] = new Persona($_SESSION["user2"],$_SESSION["email2"],$_SESSION["pass1"]);
+
+        $_SESSION["usuaris"][] = new Persona($_SESSION["user2"],$_SESSION["pass1"],$_SESSION["email2"]);
         unset($_SESSION["user2"]);
         unset($_SESSION["email2"]);
         header("Location: ../view/login.php");
