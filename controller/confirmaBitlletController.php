@@ -19,6 +19,7 @@ $_SESSION["arrayBitlletsGlobal"][] = $nouBitllet;
 $_SESSION["objUser"]->addBitllet($nouBitllet);
 
 
-echo "<pre>";
-var_dump($_SESSION["usuaris"]);
-echo "</pre>";
+
+$_SESSION["confirmacioBitllet"] = true;
+header("Location: ../view/inici.php");
+exit();

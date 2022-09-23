@@ -51,6 +51,16 @@ include_once "template/nav.php";
 
 </div>
 
+<?php  if(isset($_SESSION["confirmacioBitllet"])){
+    ?>
+<div class="taulaDePreus">
+    <h3>Acabas de comprar un bitllet!</h3>
+</div>
+<?php
+    unset($_SESSION["confirmacioBitllet"]);
+}
+?>
+
 <div class="taulaDePreus">
 
     <h2>Preus</h2>
