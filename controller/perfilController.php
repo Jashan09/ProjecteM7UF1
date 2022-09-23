@@ -21,23 +21,21 @@ if($_POST["intentDeLogin"]) {
 }
 
 
-if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-// We are a GET method.
 
 
-    if($_GET["usuaris"]){
+
+    if($_GET["type"]=="usuaris"){
         header("Location: ../../view/viewsDelAdmin/gestionaUsuaris.php");
         exit();
     }
-    if($_GET["bitllets"]){
+    if($_GET["type"]=="bitllets"){
         header("Location: ../../view/viewsDelAdmin/gestionaBitllets.php");
         exit();
     }
-    if($_GET["trajectes"]){
+    if($_GET["type"]=="trajectes"){
         header("Location: ../../view/viewsDelAdmin/gestionaTrajectes.php");
         exit();
     }
 
 
 
-}

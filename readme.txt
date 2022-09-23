@@ -15,3 +15,7 @@ vistaPerfil.php:
     - dos opcions:
         - un menu per defecte pel usuari normal
         - un altre menu pel usuari admin
+
+
+- fer les gestions/els CRUDs en un element table, treballar
+amb <td>s i <th>s

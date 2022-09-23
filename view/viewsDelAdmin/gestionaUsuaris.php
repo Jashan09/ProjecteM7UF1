@@ -17,14 +17,19 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
 <div class="divConfirmaBitllets">
 
-    <h3>Gestió d'usuaris</h3>
+    <h2>Gestió d'usuaris</h2>
     <br>
 
     <?php
     foreach ($_SESSION["usuaris"] as $persona){
         echo "<strong>Usuari: </strong>" . $persona->getUser();
         echo " | <strong>Contrasenya: </strong>" . $persona->getContrasenya();
-        echo " | <strong>Email: </strong>" . $persona->getEmail();
+        echo " | <strong>Email: </strong>" . $persona->getEmail() . " ";
+
+        echo "<input type='submit' value='Editar' style='background-color: cadetblue; b'>";
+        echo "<input type='submit' value='Eliminar'>";
+
+
         echo "<br>";
         echo "<br>";
 
@@ -33,6 +38,8 @@ if(session_status() === PHP_SESSION_NONE) session_start();
     ?>
 
 </div>
+
+
 
 
 
