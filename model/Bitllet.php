@@ -9,7 +9,18 @@ class Bitllet
     private $preuDelBitllet;
     private $bitlletAnadaTornada;
 
-
+    /**
+     * @param $origen
+     * @param $destinacio
+     * @param $caducitat
+     * @param $preuDelBitllet
+     */
+    public function __construct($origen, $destinacio, $preuDelBitllet)
+    {
+        $this->origen = $origen;
+        $this->destinacio = $destinacio;
+        $this->preuDelBitllet = $preuDelBitllet;
+    }
 
 
 }

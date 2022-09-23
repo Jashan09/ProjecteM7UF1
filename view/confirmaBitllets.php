@@ -31,15 +31,29 @@ if(session_status() === PHP_SESSION_NONE) session_start();
     if($_SESSION["trajecte"]=="12"){
         $origen = "Barcelona";
         $destinacio = "Badalona";
-        $preuTrajecte = 10;
+        $preuBitllet = 10;
     }
 
 
     echo "Origen: " . $origen . "<br>";
     echo "Destinacio: " . $destinacio . "<br>";
-    echo "Preu: " . $preuTrajecte . "$" . "<br>";
+    echo "Preu: " . $preuBitllet . "$" . "<br>";
 
     ?>
+
+    <br>
+
+    <a href="../controller/confirmaBitlletController.php?origen=<?php echo $origen;?>&destinacio=<?php echo $destinacio;?>&preuBitllet=<?php echo $preuBitllet;?>"
+       style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cornflowerblue; padding: 0px 5px 0px 5px;" >
+        Confirmar compra de bitllet</a>
+
+    <br>
+    <br>
+
+    <a href="inici.php"
+       style="text-decoration: none; color:white; border-style: solid; color: black; background-color: indianred; padding: 0px 5px 0px 5px;" >
+        Anul·la la compra</a>
+
 
 </div>
 
