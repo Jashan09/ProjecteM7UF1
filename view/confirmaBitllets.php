@@ -44,7 +44,9 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 </div>
 
 
-
+<?php
+include_once "template/footer.php";
+?>
 
 </body>
 </html>

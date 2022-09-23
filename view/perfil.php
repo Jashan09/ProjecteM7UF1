@@ -85,7 +85,12 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
         <?php
     }
-        ?>
+
+    ?>
+
+    <?php
+    include_once "template/footer.php";
+    ?>
 
     </body>
     </html>

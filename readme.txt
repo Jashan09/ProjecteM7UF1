@@ -19,3 +19,6 @@ vistaPerfil.php:
 
 - fer les gestions/els CRUDs en un element table, treballar
 amb <td>s i <th>s
+
+- fer un index.php on carregui els array de usuaris i després ens
+redireccioni a la vista del login.php

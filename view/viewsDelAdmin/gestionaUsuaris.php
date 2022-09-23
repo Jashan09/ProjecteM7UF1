@@ -35,10 +35,10 @@ if(session_status() === PHP_SESSION_NONE) session_start();
                 <td ><?php echo $persona->getUser()?></td>
                 <td><?php echo  $persona->getContrasenya()?></td>
                 <td><?php echo $persona->getEmail()?></td>
-                <td>        <a href="../../controller/controllersDelAdmin/gestionaUsuarisController.php?user=<?php echo $persona->getUser(); ?>&operacio=editar " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue;"  >Editar</a>
+                <td>        <a href="../../controller/controllersDelAdmin/gestionaUsuarisController.php?user=<?php echo $persona->getUser(); ?>&operacio=editar " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; padding: 0px 5px 0px 5px;"  >Editar</a>
                 </td>
 
-                <td>        <a href="../../controller/controllersDelAdmin/gestionaUsuarisController.php?user=<?php echo $persona->getUser(); ?>&operacio=eliminar " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: indianred;"  >Eliminar</a>
+                <td>        <a href="../../controller/controllersDelAdmin/gestionaUsuarisController.php?user=<?php echo $persona->getUser(); ?>&operacio=eliminar " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: indianred; padding: 0px 5px 0px 5px""  >Eliminar</a>
                 </td>
             </tr>
             <?php
@@ -47,6 +47,16 @@ if(session_status() === PHP_SESSION_NONE) session_start();
         ?>
     </table>
 
+    <br>
+    <?php
+
+    if ($_SESSION["userEliminat"]) {
+        echo "<h4> Usuari " . $_SESSION["userEliminat"] . " eliminat correctament</h4>";
+        unset($_SESSION["userEliminat"]);
+    }
+
+    ?>
+
 </div>
 
 
@@ -54,7 +64,9 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
 
 
-
+<?php
+include_once "../template/footer.php";
+?>
 
 </body>
 </html>
