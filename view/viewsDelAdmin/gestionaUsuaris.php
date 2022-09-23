@@ -25,9 +25,12 @@ if(session_status() === PHP_SESSION_NONE) session_start();
         echo "<strong>Usuari: </strong>" . $persona->getUser();
         echo " | <strong>Contrasenya: </strong>" . $persona->getContrasenya();
         echo " | <strong>Email: </strong>" . $persona->getEmail() . " ";
+        ?>
+        <a href="../controller/controllersDelAdmin/gestionaUsuarisControllers?user=<?php echo $persona->getUser(); ?> " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue;"  >Editar</a>
 
-        echo "<input type='submit' value='Editar' style='background-color: cadetblue; b'>";
-        echo "<input type='submit' value='Eliminar'>";
+        <a href="../controller/controllersDelAdmin/gestionaUsuarisControllers?user=<?php echo $persona->getUser(); ?>  " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: indianred;"  >Eliminar</a>
+
+        <?php
 
 
         echo "<br>";

@@ -22,8 +22,6 @@ if($_POST["intentDeLogin"]) {
 
 
 
-
-
     if($_GET["type"]=="usuaris"){
         header("Location: ../../view/viewsDelAdmin/gestionaUsuaris.php");
         exit();
