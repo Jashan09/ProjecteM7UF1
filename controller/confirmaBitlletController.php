@@ -13,6 +13,9 @@ $nouBitllet = new Bitllet($_SESSION["idBitllet"],$origen,$destinacio,$preuBitlle
 
 $_SESSION["idBitllet"]++;
 
+
+$_SESSION["arrayBitlletsGlobal"][] = $nouBitllet;
+
 $_SESSION["objUser"]->addBitllet($nouBitllet);
 
 

@@ -17,4 +17,10 @@ if(!isset($_SESSION["usuaris"])){
     echo "usuari admin i usuari 'hector' afegits";
 }
 
+if(!isset($_SESSION["arrayBitlletsGlobal"])){
+    $_SESSION["arrayBitlletsGlobal"] = array();
+
+    echo "usuari admin i usuari 'hector' afegits";
+}
+
 ?>
