@@ -20,6 +20,40 @@ if(session_status() === PHP_SESSION_NONE) session_start();
     <h2>Gestió d'usuaris</h2>
     <br>
 
+    <table>
+        <tr>
+            <th >Usuari</th>
+            <th>Contrasenya</th>
+            <th>Email</th>
+        </tr>
+        <?php
+
+        foreach ($_SESSION["usuaris"] as $persona){
+            ?>
+            <tr>
+                <td ><?php echo $persona->getUser()?></td>
+                <td><?php echo  $persona->getContrasenya()?></td>
+                <td><?php echo $persona->getEmail()?></td>
+                <td>        <a href="../controller/controllersDelAdmin/gestionaUsuarisControllers?user=<?php echo $persona->getUser(); ?> " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue;"  >Editar</a>
+                </td>
+                <td>        <a href="../controller/controllersDelAdmin/gestionaUsuarisControllers?user=<?php echo $persona->getUser(); ?>  " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: indianred;"  >Eliminar</a>
+                </td>
+            </tr>
+            <?php
+        }
+
+        ?>
+    </table>
+
+</div>
+
+
+
+<div class="divConfirmaBitllets">
+
+    <h2>Gestió d'usuaris</h2>
+    <br>
+
     <?php
     foreach ($_SESSION["usuaris"] as $persona){
         echo "<strong>Usuari: </strong>" . $persona->getUser();
@@ -32,7 +66,6 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
         <?php
 
-
         echo "<br>";
         echo "<br>";
 
@@ -41,6 +74,8 @@ if(session_status() === PHP_SESSION_NONE) session_start();
     ?>
 
 </div>
+
+
 
 
 
