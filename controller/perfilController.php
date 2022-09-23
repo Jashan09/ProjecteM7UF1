@@ -25,11 +25,21 @@ if($_POST["intentDeLogin"]) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 // We are a GET method.
+
+
+    if($_GET["usuaris"]){
+        header("Location: ../../view/gestionaUsuaris.php");
+        exit();
+    }
+    if($_GET["bitllets"]){
+        header("Location: ../../view/gestionaBitllets.php");
+        exit();
+    }
+    if($_GET["trajectes"]){
+        header("Location: ../../view/gestionaTrajectes.php");
+        exit();
+    }
+
+
+
 }
-
-if($_POST["something"]) {
-    header("Location: ../view/gestionaUsuaris.php");
-    echo "funciona";
-
-}
-

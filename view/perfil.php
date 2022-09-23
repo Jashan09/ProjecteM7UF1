@@ -52,6 +52,8 @@ if(session_status() === PHP_SESSION_NONE) session_start();
         <?php
     }
 
+    $_SESSION["huhuh"] = 0;
+
     if($_SESSION["objUser"]->getUser() == "admin"){
     ?>
 
@@ -62,19 +64,21 @@ if(session_status() === PHP_SESSION_NONE) session_start();
         <h2>Panel d'admin</h2>
         <br>
 
-        <!--
-        perfilController.php
-        gestionaUsuaris.php
-        -->
+        <form action = "/controller/perfilController.php" method = "get">
+            <input type = "submit" name = "usuaris" value="Gestionar usuaris" style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; font-size:25px; border-color: black" /> <br> <br>
+           <input type = "submit" name = "bitllets" value="Gestionar bitllets" style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; font-size:25px; border-color: black" /> <br> <br>
+            <input type = "submit" name = "trajectes" value="Gestionar trajectes" style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; font-size:25px; border-color: black" /> <br> <br>
+        </form>
 
-        <a href="../controller/perfilController.php?var=clau" style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; font-size:25px"  >Gestionar usuaris</a>
+<!--
+        <a href="../controller/perfilController.php/<?php $_SESSION["huhuh"] = 1; ?> " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; font-size:25px"  >Gestionar usuaris</a>
         <br>
         <br>
-        <a href="" style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; font-size:25px">Gestionar bitllets</a>
+        <a href="../controller/perfilController.php/<?php $_SESSION["huhuh"] = 2; ?>" style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; font-size:25px">Gestionar bitllets</a>
         <br>
         <br>
-        <a href="" style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; font-size:25px">Gestionar trajectes</a>
-
+        <a href="../controller/perfilController.php/<?php $_SESSION["huhuh"] = 3; ?>" style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; font-size:25px">Gestionar trajectes</a>
+-->
     </div>
 
         <?php
