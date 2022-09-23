@@ -1,8 +1,6 @@
 <?php
 
-
 if($_POST["intentDeLogin"]) {
-
 
     $username = $_POST["username"];
     $email = $_POST["email"];
@@ -28,15 +26,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 
 
     if($_GET["usuaris"]){
-        header("Location: ../../view/gestionaUsuaris.php");
+        header("Location: ../../view/viewsDelAdmin/gestionaUsuaris.php");
         exit();
     }
     if($_GET["bitllets"]){
-        header("Location: ../../view/gestionaBitllets.php");
+        header("Location: ../../view/viewsDelAdmin/gestionaBitllets.php");
         exit();
     }
     if($_GET["trajectes"]){
-        header("Location: ../../view/gestionaTrajectes.php");
+        header("Location: ../../view/viewsDelAdmin/gestionaTrajectes.php");
         exit();
     }
 
