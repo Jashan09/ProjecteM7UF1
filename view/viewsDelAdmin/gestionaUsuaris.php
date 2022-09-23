@@ -22,9 +22,10 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
     <table>
         <tr>
-            <th >Usuari</th>
+            <th>Usuari</th>
             <th>Contrasenya</th>
             <th>Email</th>
+            <th colspan="2">Funcions</th>
         </tr>
         <?php
 
@@ -34,9 +35,10 @@ if(session_status() === PHP_SESSION_NONE) session_start();
                 <td ><?php echo $persona->getUser()?></td>
                 <td><?php echo  $persona->getContrasenya()?></td>
                 <td><?php echo $persona->getEmail()?></td>
-                <td>        <a href="../controller/controllersDelAdmin/gestionaUsuarisControllers?user=<?php echo $persona->getUser(); ?> " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue;"  >Editar</a>
+                <td>        <a href="../../controller/controllersDelAdmin/gestionaUsuarisController.php?user=<?php echo $persona->getUser(); ?>&operacio=editar " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue;"  >Editar</a>
                 </td>
-                <td>        <a href="../controller/controllersDelAdmin/gestionaUsuarisControllers?user=<?php echo $persona->getUser(); ?>  " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: indianred;"  >Eliminar</a>
+
+                <td>        <a href="../../controller/controllersDelAdmin/gestionaUsuarisController.php?user=<?php echo $persona->getUser(); ?>&operacio=eliminar " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: indianred;"  >Eliminar</a>
                 </td>
             </tr>
             <?php
@@ -47,33 +49,6 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
 </div>
 
-
-
-<div class="divConfirmaBitllets">
-
-    <h2>Gestió d'usuaris</h2>
-    <br>
-
-    <?php
-    foreach ($_SESSION["usuaris"] as $persona){
-        echo "<strong>Usuari: </strong>" . $persona->getUser();
-        echo " | <strong>Contrasenya: </strong>" . $persona->getContrasenya();
-        echo " | <strong>Email: </strong>" . $persona->getEmail() . " ";
-        ?>
-        <a href="../controller/controllersDelAdmin/gestionaUsuarisControllers?user=<?php echo $persona->getUser(); ?> " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue;"  >Editar</a>
-
-        <a href="../controller/controllersDelAdmin/gestionaUsuarisControllers?user=<?php echo $persona->getUser(); ?>  " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: indianred;"  >Eliminar</a>
-
-        <?php
-
-        echo "<br>";
-        echo "<br>";
-
-    }
-
-    ?>
-
-</div>
 
 
 
