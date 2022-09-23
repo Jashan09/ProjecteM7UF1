@@ -23,9 +23,12 @@ if($_POST["intentDeLogin"]) {
 }
 
 
-if($_POST["something"]) {
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+// We are a GET method.
+}
 
-    header("Location: ../view/perfil.php");
+if($_POST["something"]) {
+    header("Location: ../view/gestionaUsuaris.php");
     echo "funciona";
 
 }
