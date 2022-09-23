@@ -2,6 +2,8 @@
 include_once "../../model/Persona.php";
 if(session_start() === PHP_SESSION_NONE) session_start();
 
+$_SESSION["idBitllet"]=0;
+
 if(!isset($_SESSION["usuaris"])){
     $_SESSION["usuaris"] = array();
 

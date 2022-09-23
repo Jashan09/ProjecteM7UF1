@@ -6,14 +6,14 @@ class Persona
     private $user;
     private $contrasenya;
     private $email;
-    private $quantitatDeBillets;
+    private $arrayBitllets;
     private $esAdmin;
 
     /**
      * @param $user
      * @param $contrasenya
      * @param $email
-     * @param $quantitatDeBillets
+     * @param $arrayBitllets
      * @param $esAdmin
      */
     public function __construct($user, $contrasenya, $email)
@@ -21,7 +21,7 @@ class Persona
         $this->user = $user;
         $this->contrasenya = $contrasenya;
         $this->email = $email;
-        $this->quantitatDeBillets = array();
+        $this->arrayBitllets = array();
     }
 
     /**
@@ -75,17 +75,17 @@ class Persona
     /**
      * @return array
      */
-    public function getQuantitatDeBillets()
+    public function getArrayBitllets()
     {
-        return $this->quantitatDeBillets;
+        return $this->arrayBitllets;
     }
 
     /**
-     * @param array $quantitatDeBillets
+     * @param array $arrayBitllets
      */
-    public function setQuantitatDeBillets($quantitatDeBillets)
+    public function setArrayBitllets($arrayBitllets)
     {
-        $this->quantitatDeBillets = $quantitatDeBillets;
+        $this->arrayBitllets = $arrayBitllets;
     }
 
     /**
@@ -104,6 +104,10 @@ class Persona
         $this->esAdmin = $esAdmin;
     }
 
+
+    public function addBitllet($bitllet){
+        $this->arrayBitllets[] = $bitllet;
+    }
 
 
 
