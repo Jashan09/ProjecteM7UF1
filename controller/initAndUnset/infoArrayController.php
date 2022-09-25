@@ -20,3 +20,9 @@ echo "<pre>";
 print_r($_SESSION["usuaris"]);
 echo "</pre>";
 
+
+echo "<pre>";
+print_r($_SESSION["arrayBitlletsGlobal"]);
+echo "</pre>";
+
+

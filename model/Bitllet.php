@@ -25,6 +25,104 @@ class Bitllet
         $this->preuDelBitllet = $preuDelBitllet;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getIdBitllet()
+    {
+        return $this->idBitllet;
+    }
+
+    /**
+     * @param mixed $idBitllet
+     */
+    public function setIdBitllet($idBitllet)
+    {
+        $this->idBitllet = $idBitllet;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getOrigen()
+    {
+        return $this->origen;
+    }
+
+    /**
+     * @param mixed $origen
+     */
+    public function setOrigen($origen)
+    {
+        $this->origen = $origen;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDestinacio()
+    {
+        return $this->destinacio;
+    }
+
+    /**
+     * @param mixed $destinacio
+     */
+    public function setDestinacio($destinacio)
+    {
+        $this->destinacio = $destinacio;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCaducitat()
+    {
+        return $this->caducitat;
+    }
+
+    /**
+     * @param mixed $caducitat
+     */
+    public function setCaducitat($caducitat)
+    {
+        $this->caducitat = $caducitat;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPreuDelBitllet()
+    {
+        return $this->preuDelBitllet;
+    }
+
+    /**
+     * @param mixed $preuDelBitllet
+     */
+    public function setPreuDelBitllet($preuDelBitllet)
+    {
+        $this->preuDelBitllet = $preuDelBitllet;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBitlletAnadaTornada()
+    {
+        return $this->bitlletAnadaTornada;
+    }
+
+    /**
+     * @param mixed $bitlletAnadaTornada
+     */
+    public function setBitlletAnadaTornada($bitlletAnadaTornada)
+    {
+        $this->bitlletAnadaTornada = $bitlletAnadaTornada;
+    }
+
+
+
 
 
 
