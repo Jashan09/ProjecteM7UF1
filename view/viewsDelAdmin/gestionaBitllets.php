@@ -26,7 +26,7 @@ if(session_status() === PHP_SESSION_NONE) session_start();
             <th>Origen</th>
             <th>Destinacio</th>
             <th>Preu</th>
-            <th>D'anada i tornada</th>
+            <th colspan="3">D'anada i tornada</th>
             <th>Propietari</th>
             <th colspan="2">Funcions</th>
         </tr>
@@ -38,14 +38,17 @@ if(session_status() === PHP_SESSION_NONE) session_start();
                 <td ><?php echo $bitllet->getIdBitllet()?></td>
                 <td><?php echo  $bitllet->getOrigen()?></td>
                 <td><?php echo $bitllet->getDestinacio()?></td>
-                <td><?php echo $bitllet->getPreuDelBitllet()?></td>
+                <td><?php echo $bitllet->getPreuDelBitllet() . "€" ?></td>
                 <td><?php if($bitllet->getBitlletAnadaTornada() != null){
-                            echo "Sí";
+                            echo "No";
                     }else{
-                    echo "No";
+                    echo "Sí";
                     }
                     ?>
                     </td>
+
+                <td><?php echo $bitllet->getDataAnada() ?></td>
+                <td><?php echo $bitllet->getDataTornada() ?></td>
                 <td><?php echo $bitllet->getPropietariDelBitllet()?></td>
                 <td><a href="../../controller/controllersDelAdmin/gestionaBitlletsController.php?idBitllet=<?php echo $bitllet->getIdBitllet(); ?>&operacio=editar " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; padding: 0px 5px 0px 5px;"  >Editar</a></td>
                 <td><a href="../../controller/controllersDelAdmin/gestionaBitlletsController.php?idBitllet=<?php echo $bitllet->getIdBitllet(); ?>&propietari=<?php echo $bitllet->getPropietariDelBitllet(); ?>&operacio=eliminar " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: indianred; padding: 0px 5px 0px 5px;"  >Eliminar</a></td>

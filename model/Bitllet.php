@@ -20,7 +20,7 @@ class Bitllet
      * @param $caducitat
      * @param $preuDelBitllet
      */
-    public function __construct($idBitllet, $origen, $destinacio, $preuDelBitllet, $propietariDelBitllet, $bitlletAnadaTornada)
+    public function __construct($idBitllet, $origen, $destinacio, $preuDelBitllet, $propietariDelBitllet, $bitlletAnadaTornada, $dataAnada, $dataTornada)
     {
         $this->idBitllet = $idBitllet;
         $this->origen = $origen;
@@ -28,6 +28,10 @@ class Bitllet
         $this->preuDelBitllet = $preuDelBitllet;
         $this->propietariDelBitllet = $propietariDelBitllet;
         $this->bitlletAnadaTornada = $bitlletAnadaTornada;
+
+        $this->dataAnada = $dataAnada;
+        $this->dataTornada = $dataTornada;
+
     }
 
     /**
@@ -156,6 +160,38 @@ class Bitllet
     public function setGastatBool($gastatBool): void
     {
         $this->gastatBool = $gastatBool;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDataAnada()
+    {
+        return $this->dataAnada;
+    }
+
+    /**
+     * @param mixed $dataAnada
+     */
+    public function setDataAnada($dataAnada): void
+    {
+        $this->dataAnada = $dataAnada;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDataTornada()
+    {
+        return $this->dataTornada;
+    }
+
+    /**
+     * @param mixed $dataTornada
+     */
+    public function setDataTornada($dataTornada): void
+    {
+        $this->dataTornada = $dataTornada;
     }
 
 

@@ -13,7 +13,6 @@ if(!isset($_SESSION["usuaris"])){
     $hector = new Persona("hector","1234","hector@gmail.com");
     $pepe = new Persona("pepe","pepe","pepe@hotmail.com");
 
-
     $_SESSION['usuaris'][] = $admin;
     $_SESSION['usuaris'][] = $hector;
     $_SESSION['usuaris'][] = $pepe;
@@ -24,11 +23,11 @@ if(!isset($_SESSION["usuaris"])){
 if(!isset($_SESSION["arrayBitlletsGlobal"])){
     $_SESSION["arrayBitlletsGlobal"] = array();
 
-    $bitllet0 = new Bitllet("0","Barcelona","Badalona", "10","hector", true);
-    $bitllet1 = new Bitllet("1","Barcelona","Badalona", "10","hector", false);
-    $bitllet2 = new Bitllet("2","Barcelona","Badalona", "10","hector", true);
-    $bitllet3 = new Bitllet("3","Barcelona","Badalona", "10","pepe", true);
-    $bitllet4 = new Bitllet("4","Barcelona","Badalona", "10","pepe", false);
+    $bitllet0 = new Bitllet("0","Barcelona","Badalona", "10","hector", true, "2022-09-02",null);
+    $bitllet1 = new Bitllet("1","Barcelona","Badalona", "10","hector", false, "2022-09-02", "2022-10/02");
+    $bitllet2 = new Bitllet("2","Barcelona","Badalona", "10","hector", true, "2022-09/02", null);
+    $bitllet3 = new Bitllet("3","Barcelona","Badalona", "10","pepe", true, "2022-09-02", null);
+    $bitllet4 = new Bitllet("4","Barcelona","Badalona", "10","pepe", false, "2022-09-02", "2022-10-02");
 
     $_SESSION["arrayBitlletsGlobal"][] = $bitllet0;
     $_SESSION["arrayBitlletsGlobal"][] = $bitllet1;

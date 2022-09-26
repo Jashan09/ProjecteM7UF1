@@ -2,11 +2,13 @@
 include_once "functions/checkTrajecte.php";
 if(session_start() === PHP_SESSION_NONE) session_start();
 
-
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     header("Location: ../view/viatjar.php");
     exit();
 }
+
+$_SESSION["dataAnada"] = $_POST["dataAnada"];
+$_SESSION["dataTornada"] = $_POST["dataTornada"];
 
 $origen = $_POST["origen"];
 $destinacio = $_POST["destinacio"];
