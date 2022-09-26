@@ -9,13 +9,14 @@ function deleteBitllet($idBitllet){
 
     $elUserDelBitllet = "";
 
+    //vaig a trobar el propietari d'aquest billet
     foreach ($_SESSION["arrayBitlletsGlobal"] as $bitllet){
         if($bitllet->getIdBitllet() == $idBitllet){
             $elUserDelBitllet = $bitllet->getPropietariDelBitllet();
         }
     }
 
-    //amb el metode removeBitllet del objecte Persona
+    //amb el metode removeBitllet del objecte Persona, esborro aquest bitllet
     foreach ($_SESSION["usuaris"] as $usuari){
         if($usuari->getUser() == $elUserDelBitllet){
             $usuari->removeBitllet($idBitllet);
@@ -24,7 +25,7 @@ function deleteBitllet($idBitllet){
     }
 
 
-    //deleting it in the global array of bitllets
+    //també l'esborro de l'array global de bitllets
 
     unset($_SESSION["arrayBitlletsGlobal"][$idBitllet]);
     $operacionsFetes++;
