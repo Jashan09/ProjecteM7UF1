@@ -6,6 +6,6 @@ $_SESSION["idBitlletViatjarController"] = $_GET["idBitllet"];
 
 unUsuariGastaBitllet($_SESSION["idBitlletViatjarController"]);
 
-
+header("Location: ../view/viatjar.php");
 
 ?>

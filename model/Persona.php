@@ -125,5 +125,13 @@ class Persona
         }
     }
 
+    public function findBitlletWithId($idBitllet){
+        foreach ($this->arrayBitllets as $unBitllet){
+            if($unBitllet->getIdBitllet() == $idBitllet) {
+                return $unBitllet;
+            }
+        }
+    }
+
 
 }

@@ -141,6 +141,24 @@ class Bitllet
         $this->propietariDelBitllet = $propietariDelBitllet;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getGastatBool()
+    {
+        return $this->gastatBool;
+    }
+
+    /**
+     * @param mixed $gastatBool
+     */
+    public function setGastatBool($gastatBool): void
+    {
+        $this->gastatBool = $gastatBool;
+    }
+
+
+
 
 
 

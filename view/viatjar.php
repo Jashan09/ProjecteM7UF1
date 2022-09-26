@@ -18,7 +18,7 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
 <div class="divConfirmaBitllets">
 
-    <h2>Tots els bitllets</h2>
+    <h2>Tots els viatjes disponible del usuari <?php echo $_SESSION["objUser"]->getUser() ?></h2>
     <br>
 
     <table>
@@ -33,7 +33,7 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
         foreach ($_SESSION["arrayBitlletsGlobal"] as $bitllet){
 
-           if($bitllet->getPropietariDelBitllet() == $_SESSION["objUser"]->getUser()){
+           if($bitllet->getPropietariDelBitllet() == $_SESSION["objUser"]->getUser() && $bitllet->getGastatBool() == false){
 
             ?>
 
@@ -60,7 +60,6 @@ if(session_status() === PHP_SESSION_NONE) session_start();
     <br>
 
 
-
     <?php
 
 
@@ -73,6 +72,50 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
 </div>
 
+
+
+
+<div class="divConfirmaBitllets">
+
+    <h2>Historial de viatjes realitzats</h2>
+    <br>
+
+    <table>
+        <tr>
+            <th>idBitllet</th>
+            <th>Origen</th>
+            <th>Destinacio</th>
+            <th>D'anada i tornada</th>
+        </tr>
+        <?php
+
+        foreach ($_SESSION["arrayBitlletsGlobal"] as $bitllet){
+
+            if($bitllet->getPropietariDelBitllet() == $_SESSION["objUser"]->getUser() && $bitllet->getGastatBool() == true){
+
+                ?>
+
+                <tr>
+                    <td ><?php echo $bitllet->getIdBitllet()?></td>
+                    <td><?php echo  $bitllet->getOrigen()?></td>
+                    <td><?php echo $bitllet->getDestinacio()?></td>
+                    <td><?php if($bitllet->getBitlletAnadaTornada() != null){
+                            echo "Sí";
+                        }else{
+                            echo "No";
+                        }
+                        ?>
+                    </td>
+                </tr>
+                <?php
+            }
+        }
+
+        ?>
+    </table>
+
+    <br>
+</div>
 
 
 
