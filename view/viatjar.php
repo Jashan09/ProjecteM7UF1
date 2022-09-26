@@ -26,7 +26,7 @@ if(session_status() === PHP_SESSION_NONE) session_start();
             <th>idBitllet</th>
             <th>Origen</th>
             <th>Destinacio</th>
-            <th>D'anada i tornada</th>
+            <th colspan="3">D'anada i tornada</th>
             <th></th>
         </tr>
         <?php
@@ -48,6 +48,8 @@ if(session_status() === PHP_SESSION_NONE) session_start();
                     }
                     ?>
                 </td>
+                <td><?php echo $bitllet->getDataAnada() ?></td>
+                <td><?php echo $bitllet->getDataTornada() ?></td>
                 <td><a href="../../controller/viatjarController.php?idBitllet=<?php echo $bitllet->getIdBitllet(); ?>" style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; padding: 0px 5px 0px 5px;"  >Consumir</a></td>
             </tr>
             <?php
@@ -85,7 +87,7 @@ if(session_status() === PHP_SESSION_NONE) session_start();
             <th>idBitllet</th>
             <th>Origen</th>
             <th>Destinacio</th>
-            <th>D'anada i tornada</th>
+            <th colspan="3">D'anada i tornada</th>
         </tr>
         <?php
 
@@ -106,6 +108,9 @@ if(session_status() === PHP_SESSION_NONE) session_start();
                         }
                         ?>
                     </td>
+                    <td><?php echo $bitllet->getDataAnada() ?></td>
+                    <td><?php echo $bitllet->getDataTornada() ?></td>
+
                 </tr>
                 <?php
             }
