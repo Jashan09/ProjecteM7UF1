@@ -49,7 +49,7 @@ foreach ($_SESSION["usuaris"] as $usuari){
     foreach ($usuari->getArrayBitllets() as $bitlletsDelUsuari) {
         echo "ID: [" . $bitlletsDelUsuari->getIdBitllet() . "]";
         echo " Origen: " . $bitlletsDelUsuari->getOrigen();
-        echo " | Destinacio: " . $bitlletsDelUsuari->getOrigen();
+        echo " | Destinació: " . $bitlletsDelUsuari->getOrigen();
         echo "<br>";
         $quantitatTotalDeBitllets++;
     }
