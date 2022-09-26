@@ -87,15 +87,21 @@ include_once "template/nav.php";
     <p class="pMajor">Tercera destinació -> Segona destinació</p>
     <small>10$</small>
 
-
-
 </div>
 
+<?php
+if(count($_SESSION["objUser"]->getArrayBitllets()) > 0){
+
+?>
 
 <div class="divConfirmaBitllets">
     <a href="/controller/iniciController.php">Realitzar viatjes</a>
-    <br>
 </div>
+
+
+<?php
+}
+?>
 
 
 

@@ -36,7 +36,13 @@ cada billet seria equivalent a un viatje realizat
 faltar ficar data d'anada i data de tornada a la classe billet
 
 
+------
 
+
+CLASSE PERSONA
+
+private $arrayBitllets;
+private $arrayBitlletsGastats; <- això serà el historial
 
 
 
