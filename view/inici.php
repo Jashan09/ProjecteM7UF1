@@ -92,7 +92,6 @@ include_once "template/nav.php";
 </div>
 
 
-
 <div class="divConfirmaBitllets">
     <a href="/controller/iniciController.php">Realitzar viatjes</a>
     <br>

@@ -5,7 +5,6 @@ $_SESSION["idBitlletLOL"] = $_GET["idBitllet"];
 $propietari = $_GET["propietari"];
 $operacio = $_GET["operacio"];
 
-
 if($operacio == "editar"){
 
 }

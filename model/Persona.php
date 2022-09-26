@@ -7,7 +7,7 @@ class Persona
     private $contrasenya;
     private $email;
     private $arrayBitllets;
-    private $arrayViatgesRealitzats;
+    private $arrayBitlletsGastats;
     private $esAdmin;
 
     /**
