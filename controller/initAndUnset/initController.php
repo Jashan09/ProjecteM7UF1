@@ -38,12 +38,16 @@ if(!isset($_SESSION["arrayBitlletsGlobal"])){
 
 
     $hector->addBitllet($bitllet0);
+    $_SESSION["idBitllet"]++;
     $hector->addBitllet($bitllet1);
+    $_SESSION["idBitllet"]++;
     $hector->addBitllet($bitllet2);
+    $_SESSION["idBitllet"]++;
     $pepe->addBitllet($bitllet3);
+    $_SESSION["idBitllet"]++;
     $pepe->addBitllet($bitllet4);
+    $_SESSION["idBitllet"]++;
 
-    $_SESSION["idBitllet"] = 5;
 
     echo "s'acaben d'afegir 5 bitllets";
 }
