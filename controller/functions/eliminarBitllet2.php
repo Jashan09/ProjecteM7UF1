@@ -6,14 +6,14 @@ if(session_start() === PHP_SESSION_NONE) session_start();
 function deleteBitllet($idBitllet){
 
 
-    //echo $idBitllet;
-
+    $operacionsFetes = 0;
 
     //deleting it in the arrayBitllets of object PERSONA
     foreach ($_SESSION["usuaris"] as $usuari){
         foreach ($usuari->getArrayBitllets() as $bitlletsDelUsuari) {
             if($bitlletsDelUsuari->getIdBitllet() == $idBitllet){
-                unset($bitlletsDelUsuari);
+                unset($bitlletsDelUsuari); //DELETE THE OBJECT
+                $operacionsFetes++;
             }
         }
     }
@@ -21,17 +21,17 @@ function deleteBitllet($idBitllet){
     //deleting it in the global array of bitllets
     foreach ($_SESSION["arrayBitlletsGlobal"] as $bitllet){
         if($bitllet->getIdBitllet() == $idBitllet){
-            unset($bitllet);
+            unset($bitllet); //AGAIN, DELETE THE OBJECT
+            $operacionsFetes++;
         }
     }
 
 
-
-
-
-
-
-
+    if($operacionsFetes == 2){
+        return true;
+    }else{
+        return false;
+    }
 
 
 }

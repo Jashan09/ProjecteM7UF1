@@ -50,6 +50,17 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
     <br>
 
+
+
+    <?php
+
+    if ($_SESSION["idBitllet"]) {
+        echo "<h4> Bitllet " . $_SESSION["idBitllet"] . " eliminat correctament</h4>";
+        unset($_SESSION["idBitllet"]);
+    }
+
+    ?>
+
 </div>
 
 

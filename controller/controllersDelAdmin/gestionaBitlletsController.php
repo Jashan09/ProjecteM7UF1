@@ -1,5 +1,5 @@
 <?php
-require_once "../functions/eliminarBitllet.php";
+require_once "../functions/eliminarBitllet2.php";
 
 $_SESSION["idBitllet"] = $_GET["idBitllet"];
 $operacio = $_GET["operacio"];
