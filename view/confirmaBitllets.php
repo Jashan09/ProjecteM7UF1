@@ -96,14 +96,3 @@ include_once "template/footer.php";
 </html>
 
 
-
-<?php
-
-if($_SESSION["trajecte"]=="12"){
-    $origen = "Barcelona";
-    $destinacio = "Badalona";
-}
-
-
-
-?>

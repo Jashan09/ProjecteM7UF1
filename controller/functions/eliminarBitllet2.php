@@ -3,26 +3,23 @@ require_once "../../model/Bitllet.php";
 require_once "../../model/Persona.php";
 if(session_start() === PHP_SESSION_NONE) session_start();
 
-function deleteBitllet($idBitllet){
+function deleteBitllet($idBitllet,$propietari){
 
     $operacionsFetes = 0;
 
     $elUserDelBitllet = "";
 
-    //vaig a trobar el propietari d'aquest billet
-    foreach ($_SESSION["arrayBitlletsGlobal"] as $bitllet){
-        if($bitllet->getIdBitllet() == $idBitllet){
-            $elUserDelBitllet = $bitllet->getPropietariDelBitllet();
+
+    foreach ($_SESSION["usuaris"] as $usuari){
+        if($usuari->getUser() == $propietari){
+            $objPropietari = $usuari;
         }
     }
 
-    //amb el metode removeBitllet del objecte Persona, esborro aquest bitllet
-    foreach ($_SESSION["usuaris"] as $usuari){
-        if($usuari->getUser() == $elUserDelBitllet){
-            $usuari->removeBitllet($idBitllet);
-            $operacionsFetes++;
-        }
-    }
+
+  //deleting it in the arrayBitllets of object PERSONA
+    $objPropietari->removeBitllet2($idBitllet);
+    $operacionsFetes++;
 
 
     //també l'esborro de l'array global de bitllets

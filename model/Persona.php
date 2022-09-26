@@ -112,9 +112,25 @@ class Persona
 
     public function removeBitllet($idBitllet){
 
+
+
        unset($this->arrayBitllets[$idBitllet]);
     }
 
+    public function removeBitllet2($idBitllet){
+
+        $comptador = 0;
+
+        foreach ($this->arrayBitllets as $key => $unBitllet){
+            if($unBitllet->getIdBitllet() == $idBitllet){
+                unset($this->arrayBitllets[$key]);
+                $comptador++;
+            }else if($comptador>0){
+                $this->arrayBitllets[$key-$comptador] = $unBitllet;
+                unset($this->arrayBitllets[$key]);
+            }
+        }
+    }
 
 
 }
