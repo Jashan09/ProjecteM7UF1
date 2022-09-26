@@ -18,13 +18,14 @@ class Bitllet
      * @param $caducitat
      * @param $preuDelBitllet
      */
-    public function __construct($idBitllet, $origen, $destinacio, $preuDelBitllet, $propietariDelBitllet)
+    public function __construct($idBitllet, $origen, $destinacio, $preuDelBitllet, $propietariDelBitllet, $bitlletAnadaTornada)
     {
         $this->idBitllet = $idBitllet;
         $this->origen = $origen;
         $this->destinacio = $destinacio;
         $this->preuDelBitllet = $preuDelBitllet;
         $this->propietariDelBitllet = $propietariDelBitllet;
+        $this->bitlletAnadaTornada = $bitlletAnadaTornada;
     }
 
     /**

@@ -42,8 +42,8 @@ include_once "template/nav.php";
     </select>
     <br>
     <br>
-    <label for="anadaTornadaTrue">D'anada i tornada</label>
-    <input type="checkbox" id="anadaTornadaTrue" name="anadaTornadaTrue" value="True">
+    <label for="anadaTornadaBool">D'anada i tornada</label>
+    <input type="checkbox" id="anadaTornadaBool" name="anadaTornadaBool">
     <br>
     <br>
     <input type="submit" value="Confirmar el trajecte">

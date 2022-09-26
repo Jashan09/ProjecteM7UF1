@@ -29,7 +29,7 @@ if(session_status() === PHP_SESSION_NONE) session_start();
     //$_SESSION["anadaTornadaBool"];
 
 
-    switch ($_SESSION["objUser"]) {
+    switch (true) {
         case 12:
             $origen = "Barcelona";
             $destinacio = "Badalona";
@@ -67,6 +67,7 @@ if(session_status() === PHP_SESSION_NONE) session_start();
     echo "Origen: " . $origen . "<br>";
     echo "Destinacio: " . $destinacio . "<br>";
     echo "Preu: " . $preuBitllet . "$" . "<br>";
+    echo "Anada i Tornada: " . $_SESSION["anadaTornadaBool"] . "<br>";
 
     ?>
 

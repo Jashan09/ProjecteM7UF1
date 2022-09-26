@@ -4,6 +4,7 @@ if(session_start() === PHP_SESSION_NONE) session_start();
 
 $origen = $_POST["origen"];
 $destinacio = $_POST["destinacio"];
+$_SESSION["anadaTornadaBool"] = $_POST["anadaTornadaBool"];
 
 $_SESSION["trajecte"] = checkTrajecte($origen, $destinacio);
 

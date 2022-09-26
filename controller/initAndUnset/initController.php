@@ -24,11 +24,11 @@ if(!isset($_SESSION["usuaris"])){
 if(!isset($_SESSION["arrayBitlletsGlobal"])){
     $_SESSION["arrayBitlletsGlobal"] = array();
 
-    $bitllet0 = new Bitllet("0","Barcelona","Badalona", "10","hector");
-    $bitllet1 = new Bitllet("1","Barcelona","Badalona", "10","hector");
-    $bitllet2 = new Bitllet("2","Barcelona","Badalona", "10","hector");
-    $bitllet3 = new Bitllet("3","Barcelona","Badalona", "10","pepe");
-    $bitllet4 = new Bitllet("4","Barcelona","Badalona", "10","pepe");
+    $bitllet0 = new Bitllet("0","Barcelona","Badalona", "10","hector", true);
+    $bitllet1 = new Bitllet("1","Barcelona","Badalona", "10","hector", false);
+    $bitllet2 = new Bitllet("2","Barcelona","Badalona", "10","hector", true);
+    $bitllet3 = new Bitllet("3","Barcelona","Badalona", "10","pepe", true);
+    $bitllet4 = new Bitllet("4","Barcelona","Badalona", "10","pepe", false);
 
     $_SESSION["arrayBitlletsGlobal"][] = $bitllet0;
     $_SESSION["arrayBitlletsGlobal"][] = $bitllet1;
@@ -42,6 +42,8 @@ if(!isset($_SESSION["arrayBitlletsGlobal"])){
     $hector->addBitllet($bitllet2);
     $pepe->addBitllet($bitllet3);
     $pepe->addBitllet($bitllet4);
+
+    $_SESSION["idBitllet"] = 5;
 
     echo "s'acaben d'afegir 5 bitllets";
 }
