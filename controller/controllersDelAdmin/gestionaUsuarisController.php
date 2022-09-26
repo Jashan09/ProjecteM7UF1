@@ -4,8 +4,9 @@ require_once "../functions/eliminarPersona.php";
 $_SESSION["userEliminat"] = $_GET["user"];
 $operacio = $_GET["operacio"];
 
-
 if($operacio == "editar"){
+
+    $confirmacio = editarPersona($_SESSION["userEliminat"]);
 
 }
 
