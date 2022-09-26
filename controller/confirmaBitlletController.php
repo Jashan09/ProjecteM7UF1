@@ -9,7 +9,7 @@ $destinacio = $_GET["destinacio"];
 $preuBitllet = $_GET["preuBitllet"];
 
 
-$nouBitllet = new Bitllet($_SESSION["idBitllet"],$origen,$destinacio,$preuBitllet);
+$nouBitllet = new Bitllet($_SESSION["idBitllet"],$origen,$destinacio,$preuBitllet,$_SESSION["objUser"]->getUser());
 
 $_SESSION["idBitllet"]++;
 

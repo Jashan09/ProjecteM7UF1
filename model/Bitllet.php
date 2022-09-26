@@ -9,6 +9,7 @@ class Bitllet
     private $caducitat;
     private $preuDelBitllet;
     private $bitlletAnadaTornada;
+    private $propietariDelBitllet;
 
     /**
      * @param $idBitllet
@@ -17,12 +18,13 @@ class Bitllet
      * @param $caducitat
      * @param $preuDelBitllet
      */
-    public function __construct($idBitllet, $origen, $destinacio, $preuDelBitllet)
+    public function __construct($idBitllet, $origen, $destinacio, $preuDelBitllet, $propietariDelBitllet)
     {
         $this->idBitllet = $idBitllet;
         $this->origen = $origen;
         $this->destinacio = $destinacio;
         $this->preuDelBitllet = $preuDelBitllet;
+        $this->propietariDelBitllet = $propietariDelBitllet;
     }
 
     /**
@@ -36,7 +38,7 @@ class Bitllet
     /**
      * @param mixed $idBitllet
      */
-    public function setIdBitllet($idBitllet)
+    public function setIdBitllet($idBitllet): void
     {
         $this->idBitllet = $idBitllet;
     }
@@ -52,7 +54,7 @@ class Bitllet
     /**
      * @param mixed $origen
      */
-    public function setOrigen($origen)
+    public function setOrigen($origen): void
     {
         $this->origen = $origen;
     }
@@ -68,7 +70,7 @@ class Bitllet
     /**
      * @param mixed $destinacio
      */
-    public function setDestinacio($destinacio)
+    public function setDestinacio($destinacio): void
     {
         $this->destinacio = $destinacio;
     }
@@ -84,7 +86,7 @@ class Bitllet
     /**
      * @param mixed $caducitat
      */
-    public function setCaducitat($caducitat)
+    public function setCaducitat($caducitat): void
     {
         $this->caducitat = $caducitat;
     }
@@ -100,7 +102,7 @@ class Bitllet
     /**
      * @param mixed $preuDelBitllet
      */
-    public function setPreuDelBitllet($preuDelBitllet)
+    public function setPreuDelBitllet($preuDelBitllet): void
     {
         $this->preuDelBitllet = $preuDelBitllet;
     }
@@ -116,12 +118,26 @@ class Bitllet
     /**
      * @param mixed $bitlletAnadaTornada
      */
-    public function setBitlletAnadaTornada($bitlletAnadaTornada)
+    public function setBitlletAnadaTornada($bitlletAnadaTornada): void
     {
         $this->bitlletAnadaTornada = $bitlletAnadaTornada;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getPropietariDelBitllet()
+    {
+        return $this->propietariDelBitllet;
+    }
 
+    /**
+     * @param mixed $propietariDelBitllet
+     */
+    public function setPropietariDelBitllet($propietariDelBitllet): void
+    {
+        $this->propietariDelBitllet = $propietariDelBitllet;
+    }
 
 
 

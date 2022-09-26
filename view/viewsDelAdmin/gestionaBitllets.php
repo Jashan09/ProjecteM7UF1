@@ -26,6 +26,7 @@ if(session_status() === PHP_SESSION_NONE) session_start();
             <th>Origen</th>
             <th>Destinacio</th>
             <th>Preu</th>
+            <th>Propietari</th>
             <th colspan="2">Funcions</th>
         </tr>
         <?php
@@ -37,10 +38,11 @@ if(session_status() === PHP_SESSION_NONE) session_start();
                 <td><?php echo  $bitllet->getOrigen()?></td>
                 <td><?php echo $bitllet->getDestinacio()?></td>
                 <td><?php echo $bitllet->getPreuDelBitllet()?></td>
-                <td>        <a href="../../controller/controllersDelAdmin/gestionaUsuarisController.php?user=<?php echo "hola"; ?>&operacio=editar " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; padding: 0px 5px 0px 5px;"  >Editar</a>
+                <td><?php echo $bitllet->getPropietariDelBitllet()?></td>
+                <td>        <a href="../../controller/controllersDelAdmin/gestionaBitlletsController.php?idBitllet=<?php echo $bitllet->getIdBitllet(); ?>&operacio=editar " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; padding: 0px 5px 0px 5px;"  >Editar</a>
                 </td>
 
-                <td>        <a href="../../controller/controllersDelAdmin/gestionaUsuarisController.php?user=<?php echo "hola"; ?>&operacio=eliminar " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: indianred; padding: 0px 5px 0px 5px""  >Eliminar</a>
+                <td>        <a href="../../controller/controllersDelAdmin/gestionaBitlletsController.php?idBitllet=<?php echo $bitllet->getIdBitllet(); ?>&operacio=eliminar " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: indianred; padding: 0px 5px 0px 5px;"  >Eliminar</a>
                 </td>
             </tr>
             <?php
