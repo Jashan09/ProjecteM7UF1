@@ -18,7 +18,7 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
 <div class="divConfirmaBitllets">
 
-    <h2>Gestió de bitllets</h2>
+    <h2>Tots els bitllets</h2>
     <br>
 
     <table>
@@ -37,8 +37,6 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
             ?>
 
-
-
             <tr>
                 <td ><?php echo $bitllet->getIdBitllet()?></td>
                 <td><?php echo  $bitllet->getOrigen()?></td>
@@ -50,7 +48,7 @@ if(session_status() === PHP_SESSION_NONE) session_start();
                     }
                     ?>
                 </td>
-                <td><a href="../../controller/viatjarController.php?idBitllet=<?php echo $bitllet->getIdBitllet(); ?>&operacio=editar " style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; padding: 0px 5px 0px 5px;"  >Consumir</a></td>
+                <td><a href="../../controller/viatjarController.php?idBitllet=<?php echo $bitllet->getIdBitllet(); ?>" style="text-decoration: none; color:white; border-style: solid; color: black; background-color: cadetblue; padding: 0px 5px 0px 5px;"  >Consumir</a></td>
             </tr>
             <?php
            }

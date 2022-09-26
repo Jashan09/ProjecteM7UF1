@@ -10,6 +10,7 @@ class Bitllet
     private $preuDelBitllet;
     private $bitlletAnadaTornada;
     private $propietariDelBitllet;
+    private $gastatBool;
 
     /**
      * @param $idBitllet

@@ -45,6 +45,17 @@ private $arrayBitllets;
 private $arrayBitlletsGastats; <- això serà el historial
 
 
+---------------------------------------------------
+
+  clase Persona
+    private $arrayBitlletsGastats;
+
+vs
+  clase Bitllet
+    private $gastatBool;
+
+
+
 
 
 
