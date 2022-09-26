@@ -5,26 +5,29 @@ if(session_start() === PHP_SESSION_NONE) session_start();
 
 function deleteBitllet($idBitllet){
 
-
     $operacionsFetes = 0;
 
-    //deleting it in the arrayBitllets of object PERSONA
-    foreach ($_SESSION["usuaris"] as $usuari){
-        foreach ($usuari->getArrayBitllets() as $bitlletsDelUsuari) {
-            if($bitlletsDelUsuari->getIdBitllet() == $idBitllet){
-                unset($bitlletsDelUsuari); //DELETE THE OBJECT
-                $operacionsFetes++;
-            }
+    $elUserDelBitllet = "";
+
+    foreach ($_SESSION["arrayBitlletsGlobal"] as $bitllet){
+        if($bitllet->getIdBitllet() == $idBitllet){
+            $elUserDelBitllet = $bitllet->getPropietariDelBitllet();
         }
     }
 
-    //deleting it in the global array of bitllets
-    foreach ($_SESSION["arrayBitlletsGlobal"] as $bitllet){
-        if($bitllet->getIdBitllet() == $idBitllet){
-            unset($bitllet); //AGAIN, DELETE THE OBJECT
+    //amb el metode removeBitllet del objecte Persona
+    foreach ($_SESSION["usuaris"] as $usuari){
+        if($usuari->getUser() == $elUserDelBitllet){
+            $usuari->removeBitllet($idBitllet);
             $operacionsFetes++;
         }
     }
+
+
+    //deleting it in the global array of bitllets
+
+    unset($_SESSION["arrayBitlletsGlobal"][$idBitllet]);
+    $operacionsFetes++;
 
 
     if($operacionsFetes == 2){
