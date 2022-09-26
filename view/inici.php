@@ -46,6 +46,16 @@ include_once "template/nav.php";
     <input type="checkbox" id="anadaTornadaBool" name="anadaTornadaBool">
     <br>
     <br>
+    <label for="dataAnada">Data d'anada:</label>
+    <input type="date" id="dataAnada" name="dataAnada">
+    <br>
+    <br>
+    <div class="wrap">
+    <label for="dataTornada">Data de tornada:</label>
+    <input type="date" id="dataTornada" name="dataTornada">
+    </div>
+    <br>
+    <br>
     <input type="submit" value="Confirmar el trajecte">
 </form>
 
@@ -78,7 +88,6 @@ include_once "template/nav.php";
     <br>
     <p class="pMajor">Segona destinació -> Tercera destinació</p>
     <small>10$</small>
-
     <br>
     <br>
     <p class="pMajor">Tercera destinació -> Destinació d'inici</p>

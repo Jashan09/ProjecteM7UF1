@@ -135,3 +135,11 @@ table {
     background-color: slategray;
     border-style: solid;
 }
+
+#anadaTornadaBool:checked ~ .wrap{
+    display: none;
+}
+
+.wrap{
+    display:inline-block;
+}

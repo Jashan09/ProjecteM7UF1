@@ -6,7 +6,8 @@ class Bitllet
     private $idBitllet;
     private $origen;
     private $destinacio;
-    private $caducitat;
+    private $dataAnada;
+    private $dataTornada;
     private $preuDelBitllet;
     private $bitlletAnadaTornada;
     private $propietariDelBitllet;
