@@ -22,3 +22,23 @@ amb <td>s i <th>s
 
 - fer un index.php on carregui els array de usuaris i després ens
 redireccioni a la vista del login.php
+
+
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+
+Només necesito dues classes
+
+cada billet seria equivalent a un viatje realizat
+
+faltar ficar data d'anada i data de tornada a la classe billet
+
+
+
+
+
+
+
+

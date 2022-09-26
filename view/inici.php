@@ -91,9 +91,13 @@ include_once "template/nav.php";
 
 </div>
 
-<br>
 
-<br>
+
+<div class="divConfirmaBitllets">
+    <a href="/controller/iniciController.php">Realitzar viatjes</a>
+    <br>
+</div>
+
 
 
 
