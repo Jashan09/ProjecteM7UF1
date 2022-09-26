@@ -28,11 +28,40 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
     //$_SESSION["anadaTornadaBool"];
 
-    if($_SESSION["trajecte"]=="12"){
-        $origen = "Barcelona";
-        $destinacio = "Badalona";
-        $preuBitllet = 10;
+
+    switch ($_SESSION["objUser"]) {
+        case 12:
+            $origen = "Barcelona";
+            $destinacio = "Badalona";
+            $preuBitllet = 10;
+            break;
+        case 21:
+            $origen = "Badalona";
+            $destinacio = "Barcelona";
+            $preuBitllet = 10;
+            break;
+        case 13:
+            $origen = "Barcelona";
+            $destinacio = "Tarragona";
+            $preuBitllet = 20;
+            break;
+        case 31:
+            $origen = "Tarragona";
+            $destinacio = "Barcelona";
+            $preuBitllet = 20;
+            break;
+        case 23:
+            $origen = "Badalona";
+            $destinacio = "Tarragona";
+            $preuBitllet = 10;
+            break;
+        case 32:
+            $origen = "Tarragona";
+            $destinacio = "Badalona";
+            $preuBitllet = 10;
+            break;
     }
+
 
 
     echo "Origen: " . $origen . "<br>";
