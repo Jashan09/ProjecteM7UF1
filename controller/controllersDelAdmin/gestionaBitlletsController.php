@@ -11,6 +11,7 @@ if($operacio == "editar"){
 
 if($operacio == "eliminar"){
 
+
     $confirmacio = deleteBitllet($_SESSION["idBitllet"]);
 
     header("Location: ../../view/viewsDelAdmin/gestionaBitllets.php");

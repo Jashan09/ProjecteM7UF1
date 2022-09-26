@@ -124,3 +124,12 @@ table {
     width: 100%;
     border-collapse: collapse;
 }
+
+.nouEstilPerInfoArrays{
+
+    margin-top: 50px;
+    text-align: center;
+    font-size: medium;
+    background-color: slategray;
+    border-style: solid;
+}
