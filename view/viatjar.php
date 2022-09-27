@@ -42,9 +42,9 @@ if(session_status() === PHP_SESSION_NONE) session_start();
                 <td><?php echo  $bitllet->getOrigen()?></td>
                 <td><?php echo $bitllet->getDestinacio()?></td>
                 <td><?php if($bitllet->getBitlletAnadaTornada() != null){
-                        echo "Sí";
-                    }else{
                         echo "No";
+                    }else{
+                        echo "Sí";
                     }
                     ?>
                 </td>
@@ -102,9 +102,9 @@ if(session_status() === PHP_SESSION_NONE) session_start();
                     <td><?php echo  $bitllet->getOrigen()?></td>
                     <td><?php echo $bitllet->getDestinacio()?></td>
                     <td><?php if($bitllet->getBitlletAnadaTornada() != null){
-                            echo "Sí";
-                        }else{
                             echo "No";
+                        }else{
+                            echo "Sí";
                         }
                         ?>
                     </td>

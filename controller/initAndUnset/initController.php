@@ -25,7 +25,7 @@ if(!isset($_SESSION["arrayBitlletsGlobal"])){
 
     $bitllet0 = new Bitllet("0","Barcelona","Badalona", "10","hector", true, "2022-09-02",null);
     $bitllet1 = new Bitllet("1","Barcelona","Badalona", "10","hector", false, "2022-09-02", "2022-10/02");
-    $bitllet2 = new Bitllet("2","Barcelona","Badalona", "10","hector", true, "2022-09/02", null);
+    $bitllet2 = new Bitllet("2","Barcelona","Badalona", "10","hector", true, "2022-09-02", null);
     $bitllet3 = new Bitllet("3","Barcelona","Badalona", "10","pepe", true, "2022-09-02", null);
     $bitllet4 = new Bitllet("4","Barcelona","Badalona", "10","pepe", false, "2022-09-02", "2022-10-02");
 
@@ -50,5 +50,24 @@ if(!isset($_SESSION["arrayBitlletsGlobal"])){
 
     echo "s'acaben d'afegir 5 bitllets";
 }
+
+if(!isset($_SESSION["lloc1"]) ||  !isset($_SESSION["lloc2"]) ||  !isset($_SESSION["lloc3"]) ){
+    $_SESSION["lloc1"] = "Barcelona";
+    $_SESSION["lloc2"] = "Badalona";
+    $_SESSION["lloc3"] = "Tarragona";
+
+}
+
+
+if(!isset($_SESSION["preuCas12"]) ||  !isset($_SESSION["preuCas13"]) ||  !isset($_SESSION["preuCas23"]) ){
+
+    $_SESSION["preuCas12"] = 32;
+    $_SESSION["preuCas13"] = 42;
+    $_SESSION["preuCas23"] = 555;
+
+}
+
+
+
 
 ?>

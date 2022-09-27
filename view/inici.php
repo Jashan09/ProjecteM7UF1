@@ -1,6 +1,7 @@
 <?php
 include_once "../model/Persona.php";
 if(session_status() === PHP_SESSION_NONE) session_start();
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -19,6 +20,7 @@ include_once "template/nav.php";
 ?>
 
 
+
 <div class="formulariPrincipal">
 
     <h2>Destinacions</h2>
@@ -28,17 +30,17 @@ include_once "template/nav.php";
 
     <label for="origen">Origen:</label>
     <select id="origen" name="origen">
-        <option value="lloc1">Barcelona</option>
-        <option value="lloc2">Badalona</option>
-        <option value="lloc3">Tarragona</option>
+        <option value="lloc1"><?php echo $_SESSION["lloc1"] ?></option>
+        <option value="lloc2"><?php echo $_SESSION["lloc2"] ?></option>
+        <option value="lloc3"><?php echo $_SESSION["lloc3"] ?></option>
     </select>
     <br>
     <br>
     <label for="destinacio">Destinació:</label>
     <select id="destinacio" name="destinacio">
-        <option value="lloc2">Badalona</option>
-        <option value="lloc1">Barcelona</option>
-        <option value="lloc3">Tarragona</option>
+        <option value="lloc2"><?php echo $_SESSION["lloc2"] ?></option>
+        <option value="lloc1"><?php echo $_SESSION["lloc1"] ?></option>
+        <option value="lloc3"><?php echo $_SESSION["lloc3"] ?></option>
     </select>
     <br>
     <br>
@@ -77,40 +79,30 @@ include_once "template/nav.php";
     <br>
 
     <p class="pMajor">Destinació d'inici -> Segona destinació</p>
-    <small>10$</small>
+    <small><?php echo $_SESSION["preuCas12"] ?>$</small>
     <br>
     <p class="pMajor">Destinació d'inici -> Tercera destinació</p>
-    <small>20$</small>
+    <small><?php echo $_SESSION["preuCas13"] ?>$</small>
     <br>
     <br>
     <p class="pMajor">Segona destinació -> Destinació d'inici</p>
-    <small>10$</small>
+    <small><?php echo $_SESSION["preuCas12"] ?>$</small>
     <br>
     <p class="pMajor">Segona destinació -> Tercera destinació</p>
-    <small>10$</small>
+    <small><?php echo $_SESSION["preuCas23"] ?>$</small>
     <br>
     <br>
     <p class="pMajor">Tercera destinació -> Destinació d'inici</p>
-    <small>20$</small>
+    <small><?php echo $_SESSION["preuCas13"] ?>$</small>
     <br>
     <p class="pMajor">Tercera destinació -> Segona destinació</p>
-    <small>10$</small>
+    <small><?php echo $_SESSION["preuCas23"] ?>$</small>
 
 </div>
 
-<?php
-if(count($_SESSION["objUser"]->getArrayBitllets()) > 0){
-
-?>
-
-<div class="divConfirmaBitllets">
-    <a href="/controller/iniciController.php">Realitzar viatjes</a>
-</div>
 
 
-<?php
-}
-?>
+
 
 
 

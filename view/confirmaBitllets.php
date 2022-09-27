@@ -31,34 +31,34 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
     switch ($_SESSION["trajecte"]) {
         case "12":
-            $origen = "Barcelona";
-            $destinacio = "Badalona";
-            $preuBitllet = 10;
+            $origen = $_SESSION["lloc1"];
+            $destinacio = $_SESSION["lloc2"];
+            $preuBitllet = $_SESSION["preuCas12"];
             break;
         case "21":
-            $origen = "Badalona";
-            $destinacio = "Barcelona";
-            $preuBitllet = 10;
+            $origen = $_SESSION["lloc2"];
+            $destinacio = $_SESSION["lloc1"];
+            $preuBitllet = $_SESSION["preuCas12"];
             break;
         case "13":
-            $origen = "Barcelona";
-            $destinacio = "Tarragona";
-            $preuBitllet = 20;
+            $origen = $_SESSION["lloc1"];
+            $destinacio = $_SESSION["lloc3"];
+            $preuBitllet = $_SESSION["preuCas13"];
             break;
         case "31":
-            $origen = "Tarragona";
-            $destinacio = "Barcelona";
-            $preuBitllet = 20;
+            $origen = $_SESSION["lloc3"];
+            $destinacio = $_SESSION["lloc1"];
+            $preuBitllet = $_SESSION["preuCas13"];
             break;
         case "23":
-            $origen = "Badalona";
-            $destinacio = "Tarragona";
-            $preuBitllet = 10;
+            $origen = $_SESSION["lloc2"];
+            $destinacio = $_SESSION["lloc3"];
+            $preuBitllet = $_SESSION["preuCas23"];
             break;
         case "32":
-            $origen = "Tarragona";
-            $destinacio = "Badalona";
-            $preuBitllet = 10;
+            $origen = $_SESSION["lloc3"];
+            $destinacio = $_SESSION["lloc2"];
+            $preuBitllet =$_SESSION["preuCas23"];
             break;
     }
 

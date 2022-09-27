@@ -10,6 +10,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 $_SESSION["dataAnada"] = $_POST["dataAnada"];
 $_SESSION["dataTornada"] = $_POST["dataTornada"];
 
+//$datetime1 = new DateTime($_SESSION["dataAnada"]);
+//$datetime2 = new DateTime($_SESSION["dataTornada"] );
+
+$datetime1 = new DateTime($_SESSION["dataAnada"]);
+$datetime2 = new DateTime($_SESSION["dataTornada"]);
+
+if($datetime1->format('%Y-%m-%d') > $datetime2->format('%Y-%m-%d')){
+    echo "ERROR. La data de tornada es inferior a la data d'anada.";
+    header("Location: ../view/confirmaBitllets.php");
+    exit();
+}
+
+
 $origen = $_POST["origen"];
 $destinacio = $_POST["destinacio"];
 $_SESSION["anadaTornadaBool"] = $_POST["anadaTornadaBool"];
