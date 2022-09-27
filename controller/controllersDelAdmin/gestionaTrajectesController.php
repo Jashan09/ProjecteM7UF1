@@ -11,9 +11,6 @@ $_SESSION["preuCas13"]  = $_POST["preuCas13"];
 $_SESSION["preuCas23"]  = $_POST["preuCas23"];
 
 
-
-
-
 $_SESSION["missatgeDeConfirmació"] = "S'acaben de realitzar els canvis en el trajecte...";
 
 header("Location: ../../view/viewsDelAdmin/gestionaTrajectes.php");

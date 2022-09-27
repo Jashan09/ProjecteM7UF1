@@ -1,18 +1,22 @@
 <?php
+require_once "../functions/findObjectPersonaWithUsername.php";
 require_once "../functions/eliminarPersona.php";
 
-$_SESSION["userEliminat"] = $_GET["user"];
+$usuari = $_GET["user"];
+
 $operacio = $_GET["operacio"];
 
 if($operacio == "editar"){
 
-    $confirmacio = editarPersona($_SESSION["userEliminat"]);
+    $_SESSION["objUserTrobat"] = findObjectPersonaWithUsername($usuari);
+    header("Location: ../../view/editarUsuari.php");
+    exit();
 
 }
 
 if($operacio == "eliminar"){
 
-    $confirmacio = deletePersona($_SESSION["userEliminat"]);
+    $_SESSION["userEliminat"] = deletePersona($usuari);
 
     header("Location: ../../view/viewsDelAdmin/gestionaUsuaris.php");
     exit();

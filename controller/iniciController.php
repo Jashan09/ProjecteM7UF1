@@ -10,10 +10,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 $_SESSION["dataAnada"] = $_POST["dataAnada"];
 $_SESSION["dataTornada"] = $_POST["dataTornada"];
 
-$datetime1 = new DateTime($_SESSION["dataAnada"]);
-$datetime2 = new DateTime($_SESSION["dataTornada"]);
+$dataAnada = new DateTime($_SESSION["dataAnada"]);
+$dataTornada = new DateTime($_SESSION["dataTornada"]);
 
-if($datetime1->format('%Y-%m-%d') > $datetime2->format('%Y-%m-%d')){
+//es tenia que haver fet amb un diff millor
+if($dataAnada->format('%Y-%m-%d') > $dataTornada->format('%Y-%m-%d')){
     $_SESSION["errorDates"] = "ERROR. La data de tornada és inferior a la data d'anada";
     header("Location: ../view/inici.php");
     exit();

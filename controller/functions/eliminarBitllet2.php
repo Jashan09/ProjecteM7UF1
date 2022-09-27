@@ -7,9 +7,6 @@ function deleteBitllet($idBitllet,$propietari){
 
     $operacionsFetes = 0;
 
-    $elUserDelBitllet = "";
-
-
     foreach ($_SESSION["usuaris"] as $usuari){
         if($usuari->getUser() == $propietari){
             $objPropietari = $usuari;

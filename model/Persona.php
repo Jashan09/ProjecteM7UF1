@@ -24,6 +24,8 @@ class Persona
         $this->arrayBitllets = array();
     }
 
+
+
     /**
      * @return mixed
      */
