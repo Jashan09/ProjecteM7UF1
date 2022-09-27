@@ -8,7 +8,6 @@ if($_POST["canviarDadesUsuariNormal"]) {
     $email = $_POST["email"];
     $contrasenya = $_POST["contrasenya"];
 
-
     if(checkIfUsernameExists($username)){
         $_SESSION["ERRORS2"] = "Error. Usuari existent a la BBDD, escolleix un altre..." . "<br>";
         header("Location: ../view/perfil.php");
@@ -19,9 +18,8 @@ if($_POST["canviarDadesUsuariNormal"]) {
     $_SESSION["objUser"]->setEmail($email);
     $_SESSION["objUser"]->setContrasenya($contrasenya);
 
+
     $_SESSION["missatgeConfirmacio"] = "Dades modificades correctament.";
-
-
     header("Location: ../../view/perfil.php");
     exit();
 

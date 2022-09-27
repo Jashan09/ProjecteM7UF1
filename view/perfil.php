@@ -45,7 +45,7 @@ if(session_status() === PHP_SESSION_NONE) session_start();
             unset($_SESSION["ERRORS2"]);
         }
 
-        if(isset($_SESSION["missatgeDeConfirmacio"])){
+        if(isset($_SESSION["missatgeConfirmacio"])){
             echo $_SESSION["missatgeConfirmacio"];
             unset($_SESSION["missatgeConfirmacio"]);
         }
