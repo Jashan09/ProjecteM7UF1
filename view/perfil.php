@@ -14,8 +14,9 @@ if(session_status() === PHP_SESSION_NONE) session_start();
         <link rel="stylesheet" href="css/estils.css?v=<?php echo time(); ?>">
     </head>
     <body>
-
-
+    <?php
+    include_once "template/nav.php";
+    ?>
 
     <?php
     if($_SESSION["objUser"]->getUser() != "admin"){
@@ -27,8 +28,8 @@ if(session_status() === PHP_SESSION_NONE) session_start();
         <br>
 
     <form action="../controller/perfilController.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" value="<?php echo $_SESSION["objUser"]->getUser();?>"><br><br>
+        <label for="username">Username (readonly):</label>
+        <input type="text" id="username" name="username" value="<?php echo $_SESSION["objUser"]->getUser();?>" readonly><br><br>
         <label for="email">Email:</label>
         <input type="text" id="email" name="email" value="<?php echo $_SESSION["objUser"]->getEmail();?>"><br><br>
         <label for="email">Contrasenya:</label>

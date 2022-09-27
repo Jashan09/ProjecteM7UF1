@@ -14,6 +14,9 @@ if(session_status() === PHP_SESSION_NONE) session_start();
     <title>Document</title>
 </head>
 <body>
+<?php
+include_once "../template/navGestioCRUDs.php";
+?>
 
 <div class="divConfirmaBitllets">
 

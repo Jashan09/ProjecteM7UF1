@@ -16,9 +16,9 @@ footer {
 
     text-align: center;
     width: 100%;
-    height: 5%;
+    height: 7.5%;
     background-color: cadetblue;
-    color: white;
+
 }
 
 .formulariPrincipal{
@@ -143,3 +143,4 @@ table {
 .wrap{
     display:inline-block;
 }
+

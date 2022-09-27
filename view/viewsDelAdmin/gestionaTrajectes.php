@@ -15,6 +15,7 @@ if(session_start() === PHP_SESSION_NONE) session_start();
 </head>
 <body>
 
+
 <div class="divConfirmaBitllets">
 
     <h3>Gestió de trajectes</h3>
