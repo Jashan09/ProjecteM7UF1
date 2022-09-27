@@ -59,6 +59,19 @@ include_once "template/nav.php";
     <br>
     <br>
     <input type="submit" value="Confirmar el trajecte">
+
+    <?php
+
+    if ($_SESSION["errorDates"]) {
+
+        echo "<br>";
+
+        echo "<h4>" . $_SESSION["errorDates"] . "</h4>";
+        unset($_SESSION["errorDates"]);
+    }
+
+    ?>
+
 </form>
 
 </div>
@@ -79,24 +92,24 @@ include_once "template/nav.php";
     <br>
 
     <p class="pMajor">Destinació d'inici -> Segona destinació</p>
-    <small><?php echo $_SESSION["preuCas12"] ?>$</small>
+    <small><?php echo $_SESSION["preuCas12"] ?> $</small>
     <br>
     <p class="pMajor">Destinació d'inici -> Tercera destinació</p>
-    <small><?php echo $_SESSION["preuCas13"] ?>$</small>
+    <small><?php echo $_SESSION["preuCas13"] ?> $</small>
     <br>
     <br>
     <p class="pMajor">Segona destinació -> Destinació d'inici</p>
-    <small><?php echo $_SESSION["preuCas12"] ?>$</small>
+    <small><?php echo $_SESSION["preuCas12"] ?> $</small>
     <br>
     <p class="pMajor">Segona destinació -> Tercera destinació</p>
-    <small><?php echo $_SESSION["preuCas23"] ?>$</small>
+    <small><?php echo $_SESSION["preuCas23"] ?> $</small>
     <br>
     <br>
     <p class="pMajor">Tercera destinació -> Destinació d'inici</p>
-    <small><?php echo $_SESSION["preuCas13"] ?>$</small>
+    <small><?php echo $_SESSION["preuCas13"] ?> $</small>
     <br>
     <p class="pMajor">Tercera destinació -> Segona destinació</p>
-    <small><?php echo $_SESSION["preuCas23"] ?>$</small>
+    <small><?php echo $_SESSION["preuCas23"] ?> $</small>
 
 </div>
 
