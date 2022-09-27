@@ -14,11 +14,13 @@ if(session_start() === PHP_SESSION_NONE) session_start();
 
 </head>
 <body>
-
+<?php
+include_once "../template/navGestioCRUDs.php";
+?>
 
 <div class="divConfirmaBitllets">
 
-    <h3>Gestió de trajectes</h3>
+    <h2>Gestió de trajectes</h2>
 
     <br>
 

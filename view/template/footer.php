@@ -1,8 +1,6 @@
 
 
 
-
-
 <footer>
     <br>
     <a class="huh" href="/view/inici.php" style="text-decoration: none; border-style: solid; padding: 5px;">inici.php</a>

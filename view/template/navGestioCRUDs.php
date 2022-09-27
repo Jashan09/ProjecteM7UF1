@@ -25,3 +25,20 @@ if(session_status() === PHP_SESSION_NONE) session_start();
 
 </nav>
 
+
+
+<nav class="navbar" style="font-size: 1.7em; background-color: darkslategray; position: relative; padding-top: 5px; padding-bottom: 5px;">
+    <div class="leftNav" style="display: inline">
+    </div>
+
+    <div class="rightNav" style="display: inline-block; position: absolute; right: 5px;">
+
+        <a href="../viewsDelAdmin/gestionaUsuaris.php" style="text-decoration: none; color:white; border-style: solid; color: black; background-color: indianred; padding-left: 10px; padding-right: 10px; margin-top: 100px">Tornar al panel</a>
+
+
+
+
+    </div>
+
+</nav>
+
